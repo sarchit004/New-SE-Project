@@ -23,11 +23,10 @@ function changeProfile(profileName) {
   }
   
 // show home content by default 
+
 document.addEventListener("DOMContentLoaded", function() {
   // Show the home content section by default
   showContent('home-content');
-  
-
 });
 
 // for pop-up
@@ -57,17 +56,26 @@ document.addEventListener('click', function(event) {
 
 // for content
 function showContent(contentId) {
-  // Hide all content sections
-  const contentSections = document.querySelectorAll('.content');
-  contentSections.forEach(section => {
-      section.classList.remove('active');
-  });
+    // Log the content ID to check if the function is being called
+    console.log('Showing content:', contentId);
+    
+    // Hide all content sections
+    const contentSections = document.querySelectorAll('.content');
+    contentSections.forEach(section => {
+        section.classList.remove('active');
+    });
 
-  // Show the clicked content section
-  const selectedContent = document.getElementById(contentId);
-  selectedContent.classList.add('active');
-
-  }
+    // Show the clicked content section
+    const selectedContent = document.getElementById(contentId);
+    if (selectedContent) {
+        selectedContent.classList.add('active');
+        // Log to verify if the selected content section is found
+        console.log('Selected content:', selectedContent);
+    } else {
+        // Log an error if the content section is not found
+        console.error('Content section not found:', contentId);
+    }
+}
 // =============================================================================================
 document.addEventListener("DOMContentLoaded", function() {
   // Get all toggle buttons in the document

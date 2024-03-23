@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
+body { 
+    height: 800px;
+}
 /* for switch  */
 .switch {
     --circle-dim: 1.4em;
@@ -691,14 +693,16 @@ select {
     color: white;
     width: 694px;
     height: 551px;
+    margin: 0;
     
 }
 
 .content.active {
-    position: absolute;
-    top: 140px;
-    left: 260px;
+    position: relative;
+    left: 265px;
+    bottom: 645px;
     display: flex;
+    margin: 0;
      /* Show active content section */
 }
 
