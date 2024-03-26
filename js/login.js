@@ -11,3 +11,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert("Invalid Username or password");
     }
 });
+
+
+// for effect
+
+
+// Use GSAP to create the fade-in animation
+gsap.from('.bar', { opacity: 0, duration: 1, delay: 0.5, y: -50 });
